@@ -16,7 +16,6 @@ Source0:	ftp://ftp.cpan.org/pub/CPAN/authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{v
 BuildRequires:	perl >= 5.6
 %{!?_without_tests:BuildRequires:	perl-Attribute-Handlers}
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,7 +45,7 @@ sprawdzaj±ce.
 
 %build
 perl Makefile.PL --xs
-%{__make}
+%{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
 
@@ -61,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%dir %{perl_sitearch}/auto/Params/Validate/
+%dir %{perl_sitearch}/auto/Params/Validate
 %{perl_sitearch}/auto/Params/Validate/*.bs
 %attr(755,root,root) %{perl_sitearch}/auto/Params/Validate/*.so
 %dir %{perl_sitearch}/Attribute/Params/*.pm
