@@ -18,7 +18,7 @@ BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	'perl(Params::Validatepp)'
+%define		_noautoreq	'perl(Params::ValidatePP)'
 
 %description
 The Params::Validate module allows you to validate method or function
