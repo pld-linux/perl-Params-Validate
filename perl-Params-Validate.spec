@@ -3,7 +3,7 @@ Summary:	Params::Validate perl module
 Summary(pl):	Modu³ perla Params::Validate
 Name:		perl-Params-Validate
 Version:	0.24
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/authors/id/D/DR/DROLSKY/Params-Validate-%{version}.tar.gz
@@ -41,7 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %dir %{perl_sitelib}/Params
 %{perl_sitelib}/Params/*.pm
-%dir %{perl_sitelib}/Attribute
 %dir %{perl_sitelib}/Attribute/Params
 %{perl_sitelib}/Attribute/Params/*.pm
 %{_mandir}/man3/*
