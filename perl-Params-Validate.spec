@@ -1,6 +1,21 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	Params::Validate perl module
+Summary:	Params::Validate Perl module
+Summary(cs):	Modul Params::Validate pro Perl
+Summary(da):	Perlmodul Params::Validate
+Summary(de):	Params::Validate Perl Modul
+Summary(es):	Módulo de Perl Params::Validate
+Summary(fr):	Module Perl Params::Validate
+Summary(it):	Modulo di Perl Params::Validate
+Summary(ja):	Params::Validate Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	Params::Validate ÆŞ ¸ğÁÙ
+Summary(no):	Perlmodul Params::Validate
 Summary(pl):	Modu³ perla Params::Validate
+Summary(pt_BR):	Módulo Perl Params::Validate
+Summary(pt):	Módulo de Perl Params::Validate
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Params::Validate
+Summary(sv):	Params::Validate Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Params::Validate
+Summary(zh_CN):	Params::Validate Perl Ä£¿é
 Name:		perl-Params-Validate
 Version:	0.24
 Release:	2
