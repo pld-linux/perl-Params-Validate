@@ -65,9 +65,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%dir %{perl_vendorarch}/auto/Params
 %dir %{perl_vendorarch}/auto/Params/Validate
 %{perl_vendorarch}/auto/Params/Validate/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Params/Validate/*.so
-%dir %{perl_vendorarch}/Attribute/Params/*.pm
-%dir %{perl_vendorarch}/Params/*.pm
+%dir %{perl_vendorarch}/Attribute
+%dir %{perl_vendorarch}/Attribute/Params
+%{perl_vendorarch}/Attribute/Params/*.pm
+%dir %{perl_vendorarch}/Params
+%{perl_vendorarch}/Params/*.pm
 %{_mandir}/man3/*
