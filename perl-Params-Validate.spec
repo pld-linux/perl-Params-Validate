@@ -5,14 +5,15 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Params
 %define	pnam	Validate
-Summary:	Params::Validate - Validate method/function parameters
-Summary(pl):	Params::Validate - Sprawd¼ poprawno¶æ parametrów, podanych funkcji/metodzie
+Summary:	Params::Validate - validate method/function parameters
+Summary(pl):	Params::Validate - sprawdzanie poprawno¶ci parametrów funkcji/metody
 Name:		perl-Params-Validate
-Version:	0.57
+Version:	0.59
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	f14fe21888eec9f04bb7657e642d37db
 BuildRequires:	perl-devel >= 5.6
 %{!?_without_tests:BuildRequires:	perl-Attribute-Handlers}
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -26,9 +27,10 @@ call parameters to an arbitrary level of specificity.  At the simplest
 level, it is capable of validating the required parameters were given
 and that no unspecified additional parameters were passed in.
 
-It is also capable of determining that a parameter is of a specific type,
-that it is an object of a certain class hierarchy, that it possesses
-certain methods, or applying validation callbacks to arguments.
+It is also capable of determining that a parameter is of a specific
+type, that it is an object of a certain class hierarchy, that it
+possesses certain methods, or applying validation callbacks to
+arguments.
 
 %description -l pl
 Modu³ Params::Validate pozwala na sprawdzanie poprawno¶ci parametrów,
