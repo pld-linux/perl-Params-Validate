@@ -37,7 +37,7 @@ arguments.
 %description -l pl
 Modu³ Params::Validate pozwala na sprawdzanie poprawno¶ci parametrów,
 z jakimi wywo³ana zosta³a funkcja lub metoda, na dowolnym poziomie
-szczegó³owo¶ci.  W najprostrzym przypadku mo¿liwe jest sprawdzenie,
+szczegó³owo¶ci.  W najprostszym przypadku mo¿liwe jest sprawdzenie,
 czy podane zosta³y parametry wymagane i czy nie podano dodatkowych,
 nie rozpoznawanych.
 
