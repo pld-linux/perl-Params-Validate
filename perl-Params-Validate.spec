@@ -55,8 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %dir %{perl_sitelib}/Params
-%dir %{perl_sitelib}/Params/Validate
 %{perl_sitelib}/Params/*.pm
-%{perl_sitelib}/Params/Validate/*.pm
+%dir %{perl_sitelib}/Attribute
+%dir %{perl_sitelib}/Attribute/Params
+%{perl_sitelib}/Attribute/Params/*.pm
 
 %{_mandir}/man3/*
