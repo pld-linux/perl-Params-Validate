@@ -3,7 +3,7 @@ Summary:	Params::Validate perl module
 Summary(pl):	Modu³ perla Params::Validate
 Name:		perl-Params-Validate
 Version:	0.07
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -12,6 +12,7 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-authors/id/D/DR/DROLSKY/Params-V
 Patch0:		%{name}-rpmperl-automation-workaround.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
