@@ -46,7 +46,7 @@ sprawdzaj±ce.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL --xs
+%{__perl} Makefile.PL --xs
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
