@@ -11,7 +11,7 @@ Name:		perl-Params-Validate
 Version:	0.74
 Release:	1
 # same as perl
-License:	GPL or Artistic
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	e693fbbcdaed67a5a8d0e6cd3141d0ce
