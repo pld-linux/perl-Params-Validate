@@ -2,7 +2,7 @@
 Summary:	Params::Validate perl module
 Summary(pl):	Modu³ perla Params::Validate
 Name:		perl-Params-Validate
-Version:	0.06
+Version:	0.07
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
