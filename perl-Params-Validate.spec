@@ -1,47 +1,54 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
-Summary:	Params::Validate Perl module
-Summary(cs):	Modul Params::Validate pro Perl
-Summary(da):	Perlmodul Params::Validate
-Summary(de):	Params::Validate Perl Modul
-Summary(es):	Módulo de Perl Params::Validate
-Summary(fr):	Module Perl Params::Validate
-Summary(it):	Modulo di Perl Params::Validate
-Summary(ja):	Params::Validate Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Params::Validate ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Params::Validate
-Summary(pl):	Modu³ perla Params::Validate
-Summary(pt_BR):	Módulo Perl Params::Validate
-Summary(pt):	Módulo de Perl Params::Validate
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Params::Validate
-Summary(sv):	Params::Validate Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Params::Validate
-Summary(zh_CN):	Params::Validate Perl Ä£¿é
+%define	pdir	Params
+%define	pnam	Validate
+Summary:	Params::Validate - Validate method/function parameters
+Summary(pl):	Params::Validate - Sprawd¼ poprawno¶æ parametrów, podanych funkcji/metodzie
 Name:		perl-Params-Validate
-Version:	0.24
-Release:	2
-License:	GPL
+Version:	0.51
+Release:	1
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/authors/id/D/DR/DROLSKY/Params-Validate-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	perl-Attribute-Handlers
+%{!?_without_tests:BuildRequires:	perl-Attribute-Handlers}
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	'perl(Params::Validate::Heavy)'
-
 %description
-Params::Validate - Validate method/function parameters.
+The Params::Validate module allows you to validate method or function
+call parameters to an arbitrary level of specificity.  At the simplest
+level, it is capable of validating the required parameters were given
+and that no unspecified additional parameters were passed in.
+
+It is also capable of determining that a parameter is of a specific type,
+that it is an object of a certain class hierarchy, that it possesses
+certain methods, or applying validation callbacks to arguments.
 
 %description -l pl
-Params::Validate - metoda/funkcja sprawdzaj±ca poprawno¶æ parametrów.
+Modu³ Params::Validate pozwala na sprawdzanie poprawno¶ci parametrów,
+z jakimi wywo³ana zosta³a funkcja lub metoda, na dowolnym poziomie
+szczegó³owo¶ci.  W najprostrzym przypadku mo¿liwe jest sprawdzenie,
+czy podane zosta³y parametry wymagane i czy nie podano dodatkowych,
+nie rozpoznawanych.
+
+Potrafi tak¿e okre¶liæ czy parametr jest konkretnego typu, czy jest
+obiektem danej hierarchii, czy posiada zadane metody, lub przypisaæ
+argumentom callbacki (a, i tak wszyscy wiedz±, o co chodzi... ;-> )
+sprawdzaj±ce.
 
 %prep
-%setup -q -n Params-Validate-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+perl Makefile.PL --xs
 %{__make}
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -54,8 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%dir %{perl_sitelib}/Params
-%{perl_sitelib}/Params/*.pm
-%dir %{perl_sitelib}/Attribute/Params
-%{perl_sitelib}/Attribute/Params/*.pm
+%dir %{perl_sitearch}/auto/Params/Validate/
+%{perl_sitearch}/auto/Params/Validate/*.bs
+%attr(755,root,root) %{perl_sitearch}/auto/Params/Validate/*.so
+%dir %{perl_sitearch}/Attribute/Params/*.pm
+%dir %{perl_sitearch}/Params/*.pm
 %{_mandir}/man3/*
