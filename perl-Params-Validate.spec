@@ -7,8 +7,8 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/authors/id/D/DR/DROLSKY/Params-Validate-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,18 +32,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 %dir %{perl_sitelib}/Params
 %{perl_sitelib}/Params/*.pm
 %dir %{perl_sitelib}/Attribute
 %dir %{perl_sitelib}/Attribute/Params
 %{perl_sitelib}/Attribute/Params/*.pm
-
 %{_mandir}/man3/*
