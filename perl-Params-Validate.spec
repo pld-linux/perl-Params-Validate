@@ -3,7 +3,7 @@ Summary:	Params::Validate perl module
 Summary(pl):	Modu³ perla Params::Validate
 Name:		perl-Params-Validate
 Version:	0.07
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -16,7 +16,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Params::Validate - Validate method/function parameters
+Params::Validate - Validate method/function parameters.
+
+%description -l pl
+Params::Validate - metoda/funkcja sprawdzaj±ca poprawno¶æ parametrów.
 
 %prep
 %setup -q -n Params-Validate-%{version}
