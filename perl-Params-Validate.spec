@@ -18,8 +18,7 @@ Source0:	http://www.cpan.org/authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.
 %if %{with tests}
 BuildRequires:	perl-Attribute-Handlers
 BuildRequires:	perl-Test-Simple
-# Not in PLD yet
-#BuildRequires:	perl-Test-Taint
+BuildRequires:	perl-Test-Taint
 %endif
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
