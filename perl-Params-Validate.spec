@@ -12,7 +12,7 @@ Version:	0.51
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 %{!?_without_tests:BuildRequires:	perl-Attribute-Handlers}
 BuildRequires:	rpm-perlprov >= 3.0.3-16
