@@ -9,11 +9,12 @@ Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-authors/id/D/DR/DROLSKY/Params-Validate-%{version}.tar.gz
-Patch0:		%{name}-rpmperl-automation-workaround.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	'perl(Params::Validate::Heavy)'
 
 %description
 Params::Validate - Validate method/function parameters.
@@ -23,7 +24,6 @@ Params::Validate - metoda/funkcja sprawdzaj±ca poprawno¶æ parametrów.
 
 %prep
 %setup -q -n Params-Validate-%{version}
-%patch0 -p1
 
 %build
 perl Makefile.PL
