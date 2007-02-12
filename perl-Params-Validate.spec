@@ -6,7 +6,7 @@
 %define		pdir	Params
 %define		pnam	Validate
 Summary:	Params::Validate - validate method/function parameters
-Summary(pl):	Params::Validate - sprawdzanie poprawno¶ci parametrów funkcji/metody
+Summary(pl.UTF-8):   Params::Validate - sprawdzanie poprawnoÅ›ci parametrÃ³w funkcji/metody
 Name:		perl-Params-Validate
 Version:	0.86
 Release:	1
@@ -35,17 +35,17 @@ type, that it is an object of a certain class hierarchy, that it
 possesses certain methods, or applying validation callbacks to
 arguments.
 
-%description -l pl
-Modu³ Params::Validate pozwala na sprawdzanie poprawno¶ci parametrów,
-z jakimi wywo³ana zosta³a funkcja lub metoda, na dowolnym poziomie
-szczegó³owo¶ci.  W najprostszym przypadku mo¿liwe jest sprawdzenie,
-czy podane zosta³y parametry wymagane i czy nie podano dodatkowych,
+%description -l pl.UTF-8
+ModuÅ‚ Params::Validate pozwala na sprawdzanie poprawnoÅ›ci parametrÃ³w,
+z jakimi wywoÅ‚ana zostaÅ‚a funkcja lub metoda, na dowolnym poziomie
+szczegÃ³Å‚owoÅ›ci.  W najprostszym przypadku moÅ¼liwe jest sprawdzenie,
+czy podane zostaÅ‚y parametry wymagane i czy nie podano dodatkowych,
 nie rozpoznawanych.
 
-Potrafi tak¿e okre¶liæ czy parametr jest konkretnego typu, czy jest
-obiektem danej hierarchii, czy posiada zadane metody, lub przypisaæ
-argumentom callbacki (a, i tak wszyscy wiedz±, o co chodzi... ;-> )
-sprawdzaj±ce.
+Potrafi takÅ¼e okreÅ›liÄ‡ czy parametr jest konkretnego typu, czy jest
+obiektem danej hierarchii, czy posiada zadane metody, lub przypisaÄ‡
+argumentom callbacki (a, i tak wszyscy wiedzÄ…, o co chodzi... ;-> )
+sprawdzajÄ…ce.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
