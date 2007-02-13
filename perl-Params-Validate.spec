@@ -6,7 +6,7 @@
 %define		pdir	Params
 %define		pnam	Validate
 Summary:	Params::Validate - validate method/function parameters
-Summary(pl.UTF-8):   Params::Validate - sprawdzanie poprawności parametrów funkcji/metody
+Summary(pl.UTF-8):	Params::Validate - sprawdzanie poprawności parametrów funkcji/metody
 Name:		perl-Params-Validate
 Version:	0.86
 Release:	1
