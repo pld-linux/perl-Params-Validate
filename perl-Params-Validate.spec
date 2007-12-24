@@ -15,6 +15,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b53ff2b9595623aaa4f98d8b31a5a1c2
+URL:		http://search.cpan.org/dist/Params-Validate/
 %if %{with tests}
 BuildRequires:	perl-Attribute-Handlers
 BuildRequires:	perl-Test-Simple
@@ -70,13 +71,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%dir %{perl_vendorarch}/auto/%{pdir}
-%dir %{perl_vendorarch}/auto/%{pdir}/%{pnam}
-%{perl_vendorarch}/auto/%{pdir}/%{pnam}/*.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/%{pdir}/%{pnam}/*.so
+%dir %{perl_vendorarch}/auto/Params
+%dir %{perl_vendorarch}/auto/Params/Validate
+%{perl_vendorarch}/auto/Params/Validate/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Params/Validate/*.so
 %dir %{perl_vendorarch}/Attribute
-%dir %{perl_vendorarch}/Attribute/%{pdir}
-%{perl_vendorarch}/Attribute/%{pdir}/*.pm
-%dir %{perl_vendorarch}/%{pdir}
-%{perl_vendorarch}/%{pdir}/*.pm
+%dir %{perl_vendorarch}/Attribute/Params
+%{perl_vendorarch}/Attribute/Params/*.pm
+%dir %{perl_vendorarch}/Params
+%{perl_vendorarch}/Params/*.pm
 %{_mandir}/man3/*
