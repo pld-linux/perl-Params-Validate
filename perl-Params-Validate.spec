@@ -8,17 +8,21 @@
 Summary:	Params::Validate - validate method/function parameters
 Summary(pl.UTF-8):	Params::Validate - sprawdzanie poprawności parametrów funkcji/metody
 Name:		perl-Params-Validate
-Version:	0.92
-Release:	3
+Version:	0.95
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e221233119dbdca3c610dec93a8f6cf2
+Source0:	http://www.cpan.org/modules/by-module/Params/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	f544f12357ae4ba44044cd8cb2b83a9f
 URL:		http://search.cpan.org/dist/Params-Validate/
+BuildRequires:	perl(Pod::Man) >= 1.14
+BuildRequires:	perl-ExtUtils-CBuilder
+BuildRequires:	perl-Module-Build >= 0.22
 %if %{with tests}
-BuildRequires:	perl-Attribute-Handlers
-BuildRequires:	perl-Test-Simple
+BuildRequires:	perl-Attribute-Handlers >= 0.79
+BuildRequires:	perl-Scalar-List-Utils >= 1.10
+BuildRequires:	perl-Test-Simple >= 0.34
 BuildRequires:	perl-Test-Taint
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -53,35 +57,35 @@ sprawdzające.
 
 %build
 %{__perl} Build.PL \
-	INSTALLDIRS=vendor
-%{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
+	installdirs=vendor \
+	--config cc="%{__cc}" \
+	--config ld="%{__cc}" \
+	--config optimize="%{rpmcflags}"
 
-./Build \
-	CC="%{__cc}" \
-	OPTIMIZE="%{rpmcflags}"
+%{__perl} ./Build
 
-%{?with_tests:%{__make} test}
+%{?with_tests:%{__perl} ./Build test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+%{__perl} ./Build install \
+	destdir=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
-%dir %{perl_vendorarch}/auto/Params
-%dir %{perl_vendorarch}/auto/Params/Validate
-%{perl_vendorarch}/auto/Params/Validate/*.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/Params/Validate/*.so
+%doc Changes README TODO
 %dir %{perl_vendorarch}/Attribute
 %dir %{perl_vendorarch}/Attribute/Params
-%{perl_vendorarch}/Attribute/Params/*.pm
+%{perl_vendorarch}/Attribute/Params/Validate.pm
 %dir %{perl_vendorarch}/Params
-%{perl_vendorarch}/Params/*.pm
-%{_mandir}/man3/*
+%{perl_vendorarch}/Params/Validate*.pm
+%dir %{perl_vendorarch}/auto/Params
+%dir %{perl_vendorarch}/auto/Params/Validate
+%{perl_vendorarch}/auto/Params/Validate/Validate.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Params/Validate/Validate.so
+%{_mandir}/man3/Attribute::Params::Validate.3pm*
+%{_mandir}/man3/Params::Validate*.3pm*
