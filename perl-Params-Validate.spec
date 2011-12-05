@@ -18,14 +18,14 @@ Source0:	http://www.cpan.org/modules/by-module/Params/DROLSKY/%{pdir}-%{pnam}-%{
 URL:		http://search.cpan.org/dist/Params-Validate/
 BuildRequires:	perl(Pod::Man) >= 1.14
 BuildRequires:	perl-ExtUtils-CBuilder
-BuildRequires:	perl-Module-Build >= 0.22
+BuildRequires:	perl-Module-Build >= 0.3601
 %if %{with tests}
 BuildRequires:	perl-Attribute-Handlers >= 0.79
 BuildRequires:	perl-Scalar-List-Utils >= 1.10
-BuildRequires:	perl-Test-Simple >= 0.34
+BuildRequires:	perl-Test-Simple >= 0.88
 BuildRequires:	perl-Test-Taint
 %endif
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
