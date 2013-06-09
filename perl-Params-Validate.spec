@@ -21,7 +21,6 @@ BuildRequires:	perl-Module-Build >= 0.3601
 %if %{with tests}
 BuildRequires:	perl-Attribute-Handlers >= 0.79
 BuildRequires:	perl-Module-Implementation >= 0.04
-BuildRequires:	perl-Scalar-List-Utils >= 1.10
 BuildRequires:	perl-Test-Simple >= 0.88
 BuildRequires:	perl-Test-Taint
 %endif
