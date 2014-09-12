@@ -89,7 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Params
 %dir %{perl_vendorarch}/auto/Params/Validate
 %dir %{perl_vendorarch}/auto/Params/Validate/XS
-%{perl_vendorarch}/auto/Params/Validate/XS/XS.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Params/Validate/XS/XS.so
 %{_mandir}/man3/Attribute::Params::Validate.3pm*
 %{_mandir}/man3/Params::Validate*.3pm*
