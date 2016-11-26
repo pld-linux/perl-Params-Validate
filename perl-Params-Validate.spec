@@ -8,12 +8,12 @@
 Summary:	Params::Validate - validate method/function parameters
 Summary(pl.UTF-8):	Params::Validate - sprawdzanie poprawności parametrów funkcji/metody
 Name:		perl-Params-Validate
-Version:	1.19
-Release:	3
-License:	Artistic v2
+Version:	1.26
+Release:	1
+License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b922e6c8e13d303762642ec961bd32fd
+# Source0-md5:	2e7bf5293fde78210f085c4ff32ee342
 URL:		http://search.cpan.org/dist/Params-Validate/
 BuildRequires:	perl(Pod::Man) >= 1.14
 BuildRequires:	perl-ExtUtils-CBuilder
@@ -23,7 +23,7 @@ BuildRequires:	perl-Attribute-Handlers >= 0.79
 BuildRequires:	perl-Module-Implementation >= 0.04
 BuildRequires:	perl-Scalar-List-Utils >= 1.10
 BuildRequires:	perl-Test-Simple >= 0.96
-BuildRequires:	perl-Test-Taint
+BuildRequires:	perl-Test-Taint >= 0.02
 %endif
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -80,9 +80,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes TODO
-%dir %{perl_vendorarch}/Attribute
-%dir %{perl_vendorarch}/Attribute/Params
-%{perl_vendorarch}/Attribute/Params/Validate.pm
 %dir %{perl_vendorarch}/Params
 %{perl_vendorarch}/Params/Validate.pm
 %{perl_vendorarch}/Params/ValidatePP.pm
@@ -92,5 +89,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Params/Validate
 %dir %{perl_vendorarch}/auto/Params/Validate/XS
 %attr(755,root,root) %{perl_vendorarch}/auto/Params/Validate/XS/XS.so
-%{_mandir}/man3/Attribute::Params::Validate.3pm*
 %{_mandir}/man3/Params::Validate*.3pm*
