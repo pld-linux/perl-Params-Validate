@@ -13,7 +13,7 @@ License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	cebbbbef30ef71af513ed7c2fb4faf43
-URL:		http://search.cpan.org/dist/Params-Validate/
+URL:		https://metacpan.org/release/Params-Validate
 BuildRequires:	perl(Pod::Man) >= 1.14
 BuildRequires:	perl-ExtUtils-CBuilder
 BuildRequires:	perl-Module-Build >= 0.3601
