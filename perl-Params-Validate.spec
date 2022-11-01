@@ -7,12 +7,12 @@
 Summary:	Params::Validate - validate method/function parameters
 Summary(pl.UTF-8):	Params::Validate - sprawdzanie poprawności parametrów funkcji/metody
 Name:		perl-Params-Validate
-Version:	1.30
-Release:	3
+Version:	1.31
+Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2f1f7f3a1845974d9fc44d16cac1a0fb
+# Source0-md5:	ef5f57387c2c9032b59fb23023cf5b25
 URL:		https://metacpan.org/release/Params-Validate
 BuildRequires:	perl(Pod::Man) >= 1.14
 BuildRequires:	perl-ExtUtils-CBuilder
