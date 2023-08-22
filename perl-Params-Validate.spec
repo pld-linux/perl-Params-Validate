@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Params
 %define		pnam	Validate
@@ -13,7 +13,7 @@ License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Params/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ef5f57387c2c9032b59fb23023cf5b25
-URL:		https://metacpan.org/release/Params-Validate
+URL:		https://metacpan.org/dist/Params-Validate
 BuildRequires:	perl(Pod::Man) >= 1.14
 BuildRequires:	perl-ExtUtils-CBuilder
 BuildRequires:	perl-Module-Build >= 0.3601
